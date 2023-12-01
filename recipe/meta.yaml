@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/opentelemetry-exporter-prometheus-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/opentelemetry_exporter_prometheus-{{ version }}.tar.gz
   sha256: 50cede1d66d0f051946233e78b72b949bf59fea3f35260b0bdf6243a0cae28dd
 
 build:
