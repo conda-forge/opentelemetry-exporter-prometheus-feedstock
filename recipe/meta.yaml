@@ -1,5 +1,5 @@
 {% set name = "opentelemetry-exporter-prometheus" %}
-{% set version = "1.12.0rc1" %}
+{% set version = "0.42b0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/opentelemetry-exporter-prometheus-{{ version }}.tar.gz
-  sha256: f10c6c243d69d5b63f755885b36a4ce8ef2cdf3e737c4e6bf00f32e87668f0a9
+  sha256: 50cede1d66d0f051946233e78b72b949bf59fea3f35260b0bdf6243a0cae28dd
 
 build:
   noarch: python
@@ -16,17 +16,20 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
+    - hatchling
     - pip
   run:
-    - python >=3.6
+    - python >=3.7
+    - opentelemetry-api >=1.12,<2.0
+    - opentelemetry-sdk >=1.21,<2.0
     - prometheus_client >=0.5.0,<1.0.0
-    - opentelemetry-api >=1.10.0
-    - opentelemetry-sdk >=1.10.0
 
 test:
   imports:
     - opentelemetry
+    - opentelemetry.exporter
+    - opentelemetry.exporter.prometheus
   commands:
     - pip check
   requires:
