@@ -1,13 +1,13 @@
 {% set name = "opentelemetry-exporter-prometheus" %}
-{% set version = "0.42b0" %}
+{% set version = "1.12.0rc1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/opentelemetry_exporter_prometheus-{{ version }}.tar.gz
-  sha256: 50cede1d66d0f051946233e78b72b949bf59fea3f35260b0bdf6243a0cae28dd
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: f10c6c243d69d5b63f755885b36a4ce8ef2cdf3e737c4e6bf00f32e87668f0a9
 
 build:
   noarch: python
