@@ -1,6 +1,12 @@
+bot:
+  automerge: true
+  check_solvable: true
+  run_deps_from_wheel: true
+  inspection: update-grayskull
 github:
   branch_name: main
   tooling_branch_name: main
 conda_build:
   error_overlinking: true
+  pkg_format: '2'
 conda_forge_output_validation: true
