@@ -23,7 +23,7 @@ requirements:
     - hatchling
     - pip
   run:
-    - python >= ${{ python_min }}
+    - python >=${{ python_min }}
     - opentelemetry-api >=1.12,<2.dev0
     - opentelemetry-sdk >=1.30.0,<1.31.dev0
     - prometheus_client >=0.5.0,<1.0.0
@@ -31,11 +31,14 @@ requirements:
 tests:
   - python:
       imports:
-        - opentelemetry_exporter_prometheus
+      - opentelemetry
+      - opentelemetry.exporter
+      - opentelemetry.exporter.prometheus
       pip_check: true
       python_version: ${{ python_min }}.*
 
 about:
+  home: https://github.com/open-telemetry/opentelemetry-python/tree/main/exporter/opentelemetry-exporter-prometheus
   summary: Prometheus Metric Exporter for OpenTelemetry
   license: Apache-2.0
   license_file: LICENSE
