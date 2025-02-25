@@ -1,0 +1,44 @@
+schema_version: 1
+
+context:
+  name: opentelemetry-exporter-prometheus
+  version: 0.51b0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/opentelemetry_exporter_prometheus-${{ version }}.tar.gz
+  sha256: 25673d79d3b0b864133ee8df789fc6fb408c51e64b3cb775c20526c10bb93d05
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python >=3.8
+    - hatchling
+    - pip
+  run:
+    - python >=3.8
+    - opentelemetry-api >=1.12,<2.dev0
+    - opentelemetry-sdk >=1.30.0,<1.31.dev0
+    - prometheus_client >=0.5.0,<1.0.0
+
+tests:
+  - python:
+      imports:
+        - opentelemetry_exporter_prometheus
+      pip_check: true
+
+about:
+  summary: Prometheus Metric Exporter for OpenTelemetry
+  license: Apache-2.0
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - zbowling
