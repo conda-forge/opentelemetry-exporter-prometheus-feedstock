@@ -3,7 +3,7 @@ About opentelemetry-exporter-prometheus-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/opentelemetry-exporter-prometheus-feedstock/blob/main/LICENSE.txt)
 
-
+Home: https://github.com/open-telemetry/opentelemetry-python/tree/main/exporter/opentelemetry-exporter-prometheus
 
 Package license: Apache-2.0
 
@@ -143,5 +143,9 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@conda-forge/opentelemetry-api](https://github.com/orgs/conda-forge/teams/opentelemetry-api/)
+* [@conda-forge/opentelemetry-sdk](https://github.com/orgs/conda-forge/teams/opentelemetry-sdk/)
+* [@rxm7706](https://github.com/rxm7706/)
+* [@thewchan](https://github.com/thewchan/)
 * [@zbowling](https://github.com/zbowling/)
 
