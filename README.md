@@ -147,4 +147,5 @@ Feedstock Maintainers
 * [@conda-forge/opentelemetry-sdk](https://github.com/orgs/conda-forge/teams/opentelemetry-sdk/)
 * [@rxm7706](https://github.com/rxm7706/)
 * [@thewchan](https://github.com/thewchan/)
+* [@zbowling](https://github.com/zbowling/)
 
