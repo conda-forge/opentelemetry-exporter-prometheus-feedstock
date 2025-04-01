@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: opentelemetry-exporter-prometheus
-  version: 0.51b1
+  version: 0.52b1
 
 package:
   name: ${{ name|lower }}
