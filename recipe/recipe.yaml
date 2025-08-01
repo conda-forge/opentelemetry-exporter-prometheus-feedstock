@@ -13,7 +13,7 @@ source:
   sha256: c783146b66400269783b773c5ccedf7d2ff140271478e2816202930a14c07c6b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -25,7 +25,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - opentelemetry-api >=1.12,<2.dev0
-    - opentelemetry-sdk >=1.35.0
+    - opentelemetry-sdk >=1.35.0,<1.36.dev0
     - prometheus_client >=0.5.0,<1.0.0
 
 tests:
