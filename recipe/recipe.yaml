@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: opentelemetry-exporter-prometheus
-  version: 0.60b0
+  version: 0.60b1
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/opentelemetry_exporter_prometheus-${{ version }}.tar.gz
-  sha256: c6ae33e52cdd1dbfed1f7436935df94eb03c725b57322026d04e6fbc37108e6e
+  sha256: a4011b46906323f71724649d301b4dc188aaa068852e814f4df38cc76eac616b
 
 build:
   number: 0
@@ -25,7 +25,8 @@ requirements:
   run:
     - python >=${{ python_min }}
     - opentelemetry-api >=1.12,<2.dev0
-    - opentelemetry-sdk >=1.39.0,<1.40.dev0
+    - opentelemetry-sdk >=1.39.1,<1.40.dev0
+    # prometheus_client is the conda-forge package name for prometheus-client pypi package
     - prometheus_client >=0.5.0,<1.0.0
 tests:
   - python:
