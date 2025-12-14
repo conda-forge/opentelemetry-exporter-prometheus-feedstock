@@ -26,7 +26,8 @@ requirements:
     - python >=${{ python_min }}
     - opentelemetry-api >=1.12,<2.dev0
     - opentelemetry-sdk >=1.39.1,<1.40.dev0
-    - prometheus-client <1.0.0,>=0.5.0
+    # prometheus_client is the conda-forge package name for prometheus-client pypi package
+    - prometheus_client >=0.5.0,<1.0.0
 tests:
   - python:
       imports:
