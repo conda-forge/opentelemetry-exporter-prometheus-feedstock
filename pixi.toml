@@ -5,7 +5,7 @@
 
 [workspace]
 name = "opentelemetry-exporter-prometheus-feedstock"
-version = "3.55.1"  # conda-smithy version used to generate this file
+version = "3.59.1"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/opentelemetry-exporter-prometheus-feedstock"
 authors = ["@conda-forge/opentelemetry-exporter-prometheus"]
 channels = ["conda-forge"]
